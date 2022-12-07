@@ -1,7 +1,6 @@
 """
 Database models.
 """
-from django.conf import settings
 from django.db import models
 from django.contrib.auth.models import (
     AbstractBaseUser,
@@ -21,8 +20,9 @@ class UserManager(BaseUserManager):
         if not email:
             raise ValueError('User must have an email address.')
 
-        # Because our Manager is associated to a model , we need a way to access
-        # the model that we're associated with, and this is the way to do this
+        # Because our Manager is associated to a model , we need a way
+        # to access the model that we're associated with,
+        # and this is the way to do this
         # with the Django model manager
         # self.model will be the same as defining a new User object
         # out of our User class because that is the manager that our User
