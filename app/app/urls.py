@@ -16,12 +16,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from rest_framework.routers import DefaultRouter
 from drf_spectacular.views import (
     SpectacularAPIView,
     SpectacularSwaggerView,
 )
 
+from django.views.debug import default_urlconf as default_view
+
+
+router = DefaultRouter()
+
 urlpatterns = [
+    path('', default_view, name='index'),
     path('admin/', admin.site.urls),
     path('api/schema/', SpectacularAPIView.as_view(), name='api-schema'),
     path(
