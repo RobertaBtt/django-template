@@ -24,3 +24,7 @@ Swagger is also setted up
 
 
 ![DjangoApiUser.jpg](DjangoApiUser.jpg)
+
+![ArchitectureComponent.jpg](ArchitectureComponent.jpg)
+
+![DockerComposeSetup.jpg](DockerComposeSetup.jpg)
